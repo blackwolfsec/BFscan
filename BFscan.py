@@ -214,11 +214,11 @@ if __name__=='__main__':
     
     #设置线程数不能大于扫描的端口数
     if thread_num>=len(port_list):
-        hread_num=len(port_list)
-        print_color('[info] set thread_num=%d' % hread_num, 'gray')
+        thread_num=len(port_list)
+        print_color('[info] set thread_num=%d' % thread_num, 'gray')
     if processor_num>=len(ip_list):
-        hread_num=len(ip_list)
-        print_color('[info] set processor_num=%d' % hread_num, 'gray')
+        processor_num=len(ip_list)
+        print_color('[info] set processor_num=%d' % processor_num, 'gray')
     for ip in ip_list:
         processing_Queue.put(ip)   
     print_color('[info] Total: %s scan targets' % processing_Queue.qsize() ,'gray')
